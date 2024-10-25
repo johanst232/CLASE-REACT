@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: "1",
+    title: "proud",
+    price: 15.0,
+    stock: 5,
+    description: "algodon rustico",
+    category: "remera",
+    imageUrl: "link",
+  },
+  {
+    id: "2",
+    title: "greg",
+    price: 20.0,
+    stock: 2,
+    description: "denim",
+    category: "jean",
+    imageUrl: "link",
+  },
+  {
+    id: "3",
+    title: "living",
+    price: 10.0,
+    stock: 2,
+    description: "algodon rustico",
+    category: "remera",
+    imageUrl: "link",
+  },
+  {
+    id: "4",
+    title: "race",
+    price: 30.0,
+    stock: 2,
+    description: "denim",
+    category: "jean",
+    imageUrl: "link",
+  },
+];

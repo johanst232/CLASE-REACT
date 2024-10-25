@@ -1,17 +1,21 @@
+import { useEffect, useState } from "react";
 import ProductCard from "../../commmon/productCard/ProductCard";
 import "./itemListContainer.css";
+import ItemList from "./itemList";
+import { products } from "../../productsMock";
 
-const itemListContainer = ({ gretting }) => {
-  return (
-    <div className="itemList-Container">
-      <h2>{gretting}</h2>
-      <h3>LISTA DE PRODUCTOS</h3>
-      <div>
-        <ProductCard nombre="REMERA" precio={20000} />
-        <ProductCard nombre="JEAN" precio={65000} />
-      </div>
-    </div>
-  );
+const itemListContainer = () => {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    const getProducts = new Promise((res, rej) => {
+      res(products);
+    });
+    getProducts.then((response) => {
+      setItems(response);
+    });
+  });
+
+  return <ItemList items={items} />;
 };
 
 export default itemListContainer;
