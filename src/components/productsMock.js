@@ -2,7 +2,7 @@ export const products = [
   {
     id: "1",
     title: "proud",
-    price: 15.0,
+    price: 15000,
     stock: 5,
     description: "algodon rustico",
     category: "remera",
@@ -11,7 +11,7 @@ export const products = [
   {
     id: "2",
     title: "greg",
-    price: 20.0,
+    price: 20000,
     stock: 2,
     description: "denim",
     category: "jean",
@@ -20,7 +20,7 @@ export const products = [
   {
     id: "3",
     title: "living",
-    price: 10.0,
+    price: 10000,
     stock: 2,
     description: "algodon rustico",
     category: "remera",
@@ -29,7 +29,7 @@ export const products = [
   {
     id: "4",
     title: "race",
-    price: 30.0,
+    price: 30000,
     stock: 2,
     description: "denim",
     category: "jean",

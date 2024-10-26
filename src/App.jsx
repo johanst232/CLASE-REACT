@@ -1,12 +1,15 @@
 import Navbar from "./components/layouts/navbar/navbar";
 import ItemListContainer from "./components/pages/itemListContainer/itemListContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <ItemListContainer />
-    </div>
+      <Routes>
+        <Route path={"/"} element={<ItemListContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
