@@ -16,7 +16,8 @@
   list-style: none;
   color: aliceblue;
 }
-.container-nav h3 {
+.container-nav a {
   color: aliceblue;
   padding-left: 20px;
+  text-decoration: none;
 }

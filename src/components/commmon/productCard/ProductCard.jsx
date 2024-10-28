@@ -7,15 +7,15 @@ import {
   Typography,
 } from "@mui/material";
 import "./ProductCard.css";
-import { Category } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
-const ProductCard = ({ title, price, description, category }) => {
+const ProductCard = ({ title, price, description, category, id }) => {
   return (
     <Card sx={{ width: 300, height: 300 }}>
       <CardMedia
         sx={{ height: 140 }}
         image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+        title="Productos"
       />
       <CardContent>
         <Typography
@@ -24,15 +24,7 @@ const ProductCard = ({ title, price, description, category }) => {
           variant="h5"
           component="div"
         >
-          {category}
-        </Typography>
-        <Typography
-          sx={{ textTransform: "uppercase" }}
-          gutterBottom
-          variant="h5"
-          component="div"
-        >
-          {title}
+          {category + " " + title}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {description}
@@ -42,7 +34,9 @@ const ProductCard = ({ title, price, description, category }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Ver Producto</Button>
+        <Link to={`/productDetail/${id}`}>
+          <Button size="small">Ver Producto</Button>
+        </Link>
       </CardActions>
     </Card>
   );

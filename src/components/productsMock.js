@@ -5,7 +5,7 @@ export const products = [
     price: 15000,
     stock: 5,
     description: "algodon rustico",
-    category: "remera",
+    category: "remeras",
     imageUrl: "link",
   },
   {
@@ -14,7 +14,7 @@ export const products = [
     price: 20000,
     stock: 2,
     description: "denim",
-    category: "jean",
+    category: "jeans",
     imageUrl: "link",
   },
   {
@@ -23,7 +23,7 @@ export const products = [
     price: 10000,
     stock: 2,
     description: "algodon rustico",
-    category: "remera",
+    category: "remeras",
     imageUrl: "link",
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     price: 30000,
     stock: 2,
     description: "denim",
-    category: "jean",
+    category: "jeans",
     imageUrl: "link",
   },
 ];

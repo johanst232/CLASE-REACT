@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
-import itemDetail from "./itemDetail";
 import { products } from "../../productsMock";
-const itemDetailContainer = () => {
+import { useParams } from "react-router-dom";
+import ItemDetail from "./itemDetail";
+
+const ItemDetailContainer = () => {
   const [item, setItems] = useState({});
+  const { id } = useParams();
   useEffect(() => {
-    const id = 1;
     let product = products.find((product) => product.id === id);
     if (product) {
       setItems(product);
     }
   }, [id]);
-  return <itemDetail item={item} />;
+  return <ItemDetail item={item} />;
 };
 
-export default itemDetailContainer;
+export default ItemDetailContainer;

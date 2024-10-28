@@ -1,13 +1,13 @@
 import React from "react";
 import CounterContainer from "../../commmon/Contador/CounterContainer";
 
-const itemDetail = ({ item }) => {
+const ItemDetail = ({ item }) => {
   return (
     <div>
-      <h1>{item.tittle}</h1>
+      <h1>{item.category + " " + item.title}</h1>
       <CounterContainer />
     </div>
   );
 };
 
-export default itemDetail;
+export default ItemDetail;
