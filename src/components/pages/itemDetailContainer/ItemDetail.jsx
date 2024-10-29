@@ -1,11 +1,11 @@
 import React from "react";
 import CounterContainer from "../../commmon/Contador/CounterContainer";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
   return (
     <div>
       <h1>{item.category + " " + item.title}</h1>
-      <CounterContainer />
+      <CounterContainer onAdd={onAdd} stock={item.stock} />
     </div>
   );
 };
