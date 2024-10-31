@@ -3,23 +3,30 @@ import { products } from "../../productsMock";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./itemDetail";
 import { CartContext } from "../../context/CartContext";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../../../config-firebase";
 
 const ItemDetailContainer = () => {
   const [item, setItems] = useState({});
-  const { agregarAlCarrito } = useContext(CartContext);
+  const { agregarAlCarrito, getQuantityById } = useContext(CartContext);
   const { id } = useParams();
+  let totalItems = getQuantityById(id);
   useEffect(() => {
-    let product = products.find((product) => product.id === id);
+    let productosCollection = collection(db, "productos");
+    let refDoc = doc(productosCollection, id);
+    let getProductos = getDoc(refDoc);
+    getProductos.then((res) => setItems({ ...res.data(), id: res.id }));
+    /* let product = products.find((product) => product.id === id);
     if (product) {
       setItems(product);
-    }
+    } */
   }, [id]);
 
   const onAdd = (quantity) => {
     let productsInCart = { ...item, quantity };
     agregarAlCarrito(productsInCart);
   };
-  return <ItemDetail item={item} onAdd={onAdd} />;
+  return <ItemDetail item={item} onAdd={onAdd} totalItems={totalItems} />;
 };
 
 export default ItemDetailContainer;

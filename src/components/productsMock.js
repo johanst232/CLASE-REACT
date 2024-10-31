@@ -6,7 +6,8 @@ export const products = [
     stock: 5,
     description: "algodon rustico",
     category: "remeras",
-    imageUrl: "link",
+    imageUrl:
+      "https://res.cloudinary.com/ddfbid0mk/image/upload/v1730333550/eshopRopa/k1yv1nnlqhd73zophg9y.jpg",
   },
   {
     id: "2",
@@ -15,7 +16,8 @@ export const products = [
     stock: 7,
     description: "denim",
     category: "jeans",
-    imageUrl: "link",
+    imageUrl:
+      "https://res.cloudinary.com/ddfbid0mk/image/upload/v1730333643/eshopRopa/qiuwawfhehecasun3dgc.jpg",
   },
   {
     id: "3",
@@ -24,7 +26,8 @@ export const products = [
     stock: 10,
     description: "algodon rustico",
     category: "remeras",
-    imageUrl: "link",
+    imageUrl:
+      "https://res.cloudinary.com/ddfbid0mk/image/upload/v1730333642/eshopRopa/eskvmc80j91qy7iaqqcp.jpg",
   },
   {
     id: "4",
@@ -33,6 +36,7 @@ export const products = [
     stock: 2,
     description: "denim",
     category: "jeans",
-    imageUrl: "link",
+    imageUrl:
+      "https://res.cloudinary.com/ddfbid0mk/image/upload/v1730333642/eshopRopa/hczqopzfphrppdzrvjrn.webp",
   },
 ];

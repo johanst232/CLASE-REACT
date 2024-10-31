@@ -5,10 +5,11 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const cartWidget = () => {
-  const { Cart } = useContext(CartContext);
+  const { getTotalProducts } = useContext(CartContext);
+  const TotalItems = getTotalProducts();
   return (
     <div className="logoCart">
-      <Badge badgeContent={Cart.length} color="primary">
+      <Badge badgeContent={TotalItems} color="primary">
         <ShoppingBagIcon />
       </Badge>
     </div>

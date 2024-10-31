@@ -9,14 +9,10 @@ import {
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ title, price, description, category, id }) => {
+const ProductCard = ({ title, price, description, category, id, imageUrl }) => {
   return (
-    <Card sx={{ width: 300, height: 300 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="Productos"
-      />
+    <Card sx={{ width: 300, height: 500 }}>
+      <CardMedia sx={{ height: 330 }} image={imageUrl} title="Productos" />
       <CardContent>
         <Typography
           sx={{ textTransform: "uppercase" }}
