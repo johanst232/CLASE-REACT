@@ -2,7 +2,7 @@ import CartWidget from "../../commmon/cartWidget/cartWidget";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
-const navbar = () => {
+const Navbar = () => {
   const categories = [
     { title: "Todos", path: "/" },
     { title: "remeras", path: "/category/remeras" },
@@ -25,4 +25,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
