@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import { products } from "../../productsMock";
 import { useParams } from "react-router-dom";
-import ItemDetail from "./itemDetail";
 import { CartContext } from "../../context/CartContext";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../../config-firebase";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
   const [item, setItems] = useState({});

@@ -1,6 +1,5 @@
 import React from "react";
 import CounterContainer from "../../commmon/Contador/CounterContainer";
-import { Typography } from "@mui/material";
 
 const ItemDetail = ({ item, onAdd, totalItems }) => {
   return (
