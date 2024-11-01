@@ -8,10 +8,12 @@ const CartContainer = () => {
     LimpiarCarrito,
     deleteProductbyId,
     getTotal,
+    columns,
   } = useContext(CartContext);
   let total = getTotal();
   return (
     <Cart
+      columns={columns}
       cart={cart}
       LimpiarCarrito={LimpiarCarrito}
       deleteProductbyId={deleteProductbyId}

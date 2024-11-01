@@ -23,7 +23,8 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   const onAdd = (quantity) => {
-    let productsInCart = { ...item, quantity };
+    let subTotal = quantity * item.price;
+    let productsInCart = { ...item, quantity, subTotal };
     agregarAlCarrito(productsInCart);
   };
   return <ItemDetail item={item} onAdd={onAdd} totalItems={totalItems} />;

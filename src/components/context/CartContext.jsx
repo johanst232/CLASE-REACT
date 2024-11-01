@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-
+import { DataGrid } from "@mui/x-data-grid";
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
@@ -45,7 +45,31 @@ export const CartContextProvider = ({ children }) => {
     let product = Cart.find((element) => element.id === id);
     return product ? product.quantity : 1;
   };
-
+  const columns = [
+    { field: "category", headerName: "category", width: 300, editable: false },
+    { field: "title", headerName: "Product", width: 300, editable: false },
+    {
+      field: "price",
+      headerName: "price",
+      width: 300,
+      editable: false,
+      type: "number",
+    },
+    {
+      field: "quantity",
+      headerName: "quantity",
+      width: 300,
+      editable: false,
+      type: "number",
+    },
+    {
+      field: "subTotal",
+      headerName: "subTotal",
+      editable: false,
+      type: "number",
+      width: 350,
+    },
+  ];
   let data = {
     Cart,
     agregarAlCarrito,
@@ -54,6 +78,7 @@ export const CartContextProvider = ({ children }) => {
     getTotal,
     getTotalProducts,
     getQuantityById,
+    columns,
   };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
