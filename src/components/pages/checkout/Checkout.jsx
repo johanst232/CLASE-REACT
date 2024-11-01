@@ -18,7 +18,6 @@ const Checkout = () => {
   const navigate = useNavigate();
 
   const handleRedirect = () => {
-    navigate("/");
     toast.success(`el id de su compra es es: ${OrderId}`, { duration: 5000 });
     toast.success(`Su compra se realizo con exito`, { duration: 5000 });
   };
