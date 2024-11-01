@@ -4,7 +4,7 @@ import "./CartWidget.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-const cartWidget = () => {
+const CartWidget = () => {
   const { getTotalProducts } = useContext(CartContext);
   const TotalItems = getTotalProducts();
   return (
@@ -16,4 +16,4 @@ const cartWidget = () => {
   );
 };
 
-export default cartWidget;
+export default CartWidget;
