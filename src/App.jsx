@@ -1,5 +1,6 @@
 import { CartContextProvider } from "./components/context/CartContext";
-import Navbar from "./components/layouts/navbar/Navbar";
+import Navbar from "./components/layouts/Navbar/Navbar";
+
 import CartContainer from "./components/pages/cartContainer/CartContainer";
 import Checkout from "./components/pages/checkout/Checkout";
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
